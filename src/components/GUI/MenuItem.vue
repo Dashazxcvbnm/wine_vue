@@ -38,6 +38,7 @@ defineProps({
 }
 
 .spreadsheet-column {
+    text-align: center;
     width: 1110px;
     border: 1px solid rgb(255, 255, 255);
     border-left-width: 0;

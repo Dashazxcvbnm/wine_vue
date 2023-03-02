@@ -1,11 +1,16 @@
 <template>
     <div>
-        <button 
-        class="btn">
-            <slot></slot>
-        </button>
+        <button class="btn">{{ text }}</button>
     </div>
 </template>
+
+<script setup>
+
+defineProps({
+    text: String
+})
+
+</script>
 
 <style scoped>
 

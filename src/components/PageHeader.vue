@@ -1,18 +1,9 @@
 <template>
     <div class="header">
-        <span>{{ add }}</span>
-        <span>{{ phone }}</span>
+        <span>Новокузнечный переулок 4/1</span>
+        <span>"8 (812) 123-45-67"</span>
     </div>
 </template>
-
-<script setup>
-
-defineProps({
-    add: [String, Number],
-    phone: [String, Number]
-})
-
-</script>
 
 <style scoped>
 
