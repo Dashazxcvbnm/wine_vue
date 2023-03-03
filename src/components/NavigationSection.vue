@@ -34,7 +34,7 @@ const items = ref([
 <style scoped>
 
 .content-container {
-    width: 80%;
+    width: 87%;
     margin: 0 auto;
     height: 100vh;
 }
@@ -49,7 +49,7 @@ const items = ref([
 .button-wrapper {
     display: flex;
     justify-content: center;
-    margin-top: 590px;
+    margin-top: 568px;
 }
 
 .control-button {
