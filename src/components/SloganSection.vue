@@ -50,16 +50,15 @@ import WineVueText from './GUI/WineVueText.vue';
 }
 
 .content-container {
-    width: 80%;
+    width: 87%;
     margin: 0 auto;
-    height: 100vh;
+    
 }
 
 .border-wrapper {
     border: 3px solid rgb(196, 196, 196);
     margin-top: 100px;
     margin-bottom: 100px;
-    width: 1100px;
 }
 
 .section--second-title {
@@ -77,9 +76,8 @@ import WineVueText from './GUI/WineVueText.vue';
 .section--second-text {
     font-size: 16px;
     color: rgb(255, 255, 255);
-    width: 733px;
+    width: 66%;
     margin: 40px auto 50px auto;
-    height: 192px;
 }
 
 .section-img {
