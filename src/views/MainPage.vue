@@ -1,10 +1,10 @@
 <template>
 <NavigationSection/>
-<NoveltySection/>
+<SloganSection/>
 </template>
 
 <script setup>
 import NavigationSection from '../components/NavigationSection.vue';
-import NoveltySection from '../components/NoveltySection.vue';
+import SloganSection from '../components/SloganSection.vue';
 
 </script>
