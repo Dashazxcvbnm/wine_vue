@@ -2,8 +2,7 @@
 <div class="section--first">
     <div class="content-container">
 
-        <PageHeader/>
-        <MenuItem :items="items"></MenuItem>
+        <slot></slot>
         
         <div class="button-wrapper">
             <WineVueButton class="control-button" text="винная карта"></WineVueButton>
@@ -16,25 +15,14 @@
 
 <script setup>
 
-import PageHeader from './PageHeader.vue';
-import MenuItem from './GUI/MenuItem.vue';
 import WineVueButton from './GUI/WineVueButton.vue';
-
-import { ref } from 'vue'
-
-const items = ref([
-  { id: 1, value: 'Каталог' },
-  { id: 2, value: 'Доставка' },
-  { id: 3, value: 'Коллекции' },
-  { id: 4, value: 'Контакты' },
-])
 
 </script>
 
 <style scoped>
 
 .content-container {
-    width: 80%;
+    width: 87%;
     margin: 0 auto;
     height: 100vh;
 }
@@ -49,7 +37,7 @@ const items = ref([
 .button-wrapper {
     display: flex;
     justify-content: center;
-    margin-top: 590px;
+    margin-top: 568px;
 }
 
 .control-button {
