@@ -16,7 +16,6 @@ defineProps({
     font-family: 'Playfair Display';
     font-size: 30px;
     color: rgb(255, 255, 255);
-    text-align: center;
     line-height: 54px;
 }
 </style>

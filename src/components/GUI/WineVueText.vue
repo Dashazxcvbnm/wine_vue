@@ -16,7 +16,7 @@ defineProps({
 
 .section-text {
     font-family: 'Montserrat';
-    line-height: 24px;
-    text-align: center;
+    /* line-height: 24px;
+    text-align: center; */
 }
 </style>

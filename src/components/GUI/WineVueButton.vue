@@ -24,5 +24,6 @@ defineProps({
     font-family: 'Montserrat';
     text-transform: uppercase;
     cursor: pointer;
+    white-space: nowrap;
 }
 </style>
