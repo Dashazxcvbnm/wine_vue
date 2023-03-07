@@ -22,7 +22,7 @@ import WineVueButton from './GUI/WineVueButton.vue';
 <style scoped>
 
 .content-container {
-    width: 87%;
+    width: 86%;
     margin: 0 auto;
     height: 100vh;
 }
