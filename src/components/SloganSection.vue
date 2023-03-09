@@ -3,15 +3,12 @@
     <div class="content-container">
         <div class="border-wrapper">
 
-            <WineVueTitle 
-            class="section--second-title" 
-            text="Лучший вкус, это вкус долголетнего вина"/>
+            <h1 class="section--second-title">Лучший вкус, это вкус долголетнего вина</h1>
 
             <div class="border-line"></div>
 
-            <WineVueText
-            class="section--second-text"
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <span class="section--second-text section-text_white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                  Feugiat enim tortor in hac id imperdiet adipiscing. 
                  Pellentesque nisi, mi sit non sit sed fermentum.
                  Felis adipiscing morbi sodales ac.
@@ -24,7 +21,8 @@
                  Tellus dolor, eget vitae dignissim molestie eget sit duis.
                  Vitae dui vel pretium euismod diam.
                  Pellentesque amet, lacus, amet, quis risus.
-                 Pellentesque scelerisque nunc, orci aliquam quis."/>
+                 Pellentesque scelerisque nunc, orci aliquam quis.
+            </span>
                  
             <div class="section-img">
                     
@@ -36,52 +34,46 @@
 </div>
 </template>
 
-<script setup>
-import WineVueTitle from './GUI/WineVueTitle.vue';
-import WineVueText from './GUI/WineVueText.vue';
-</script>
-
 <style scoped>
 
 .section--second {
     background: rgb(40, 40, 40);
     display: flex;
+    justify-content: center;
+    flex-direction: column;
     min-height: 856px;
 }
 
 .content-container {
-    width: 87%;
+    width: 86%;
     margin: 0 auto;
     
 }
 
 .border-wrapper {
     border: 3px solid rgb(196, 196, 196);
-    margin-top: 100px;
-    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 656px;
+    justify-content: space-between;
 }
 
 .section--second-title {
-    margin: 60px auto 40px auto;
+    padding-top: 60px;
+    margin: 0 auto;
 }
 
 .border-line {
     width: 160px;
-    margin: auto;
     border-top: 1px solid rgb(255, 255, 255);
-    margin-top: 40px;
-    margin-bottom: 40px;
 }
 
 .section--second-text {
-    font-size: 16px;
-    color: rgb(255, 255, 255);
     width: 66%;
-    margin: 40px auto 50px auto;
 }
 
 .section-img {
-    text-align: center;
     padding-bottom: 60px;
 }
 </style>

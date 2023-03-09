@@ -2,7 +2,7 @@
 <div class="section--first">
     <div class="content-container">
 
-        <slot></slot>
+        <PageHeader/>
         
         <div class="button-wrapper">
             <WineVueButton class="control-button" text="винная карта"></WineVueButton>
@@ -16,6 +16,7 @@
 <script setup>
 
 import WineVueButton from './GUI/WineVueButton.vue';
+import PageHeader from '../components/PageHeader.vue';
 
 </script>
 

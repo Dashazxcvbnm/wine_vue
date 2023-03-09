@@ -1,12 +1,14 @@
 <template>
     <div>
-        <div class="header">
-        <span>Новокузнечный переулок 4/1</span>
-        <span>"8 (812) 123-45-67"</span>
 
-            </div>
-                <NavigationMenu :items="items"></NavigationMenu>
-            </div>
+        <div class="header">
+            <span>Новокузнечный переулок 4/1</span>
+            <span>"8 (812) 123-45-67"</span>
+        </div>
+        
+        <NavigationMenu :items="items"></NavigationMenu>
+        
+    </div>
 </template>
 
 <script setup>
