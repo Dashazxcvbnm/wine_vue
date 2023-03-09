@@ -5,37 +5,34 @@
 
             <div class="sector-content">
 
-                <WineVueText
-                class="section--third-text"
-                text="Новинки коллекций"/>
+                <span 
+                class="section--third-text section-text_black">
+                Новинки коллекций</span>
 
-                <div>
-                <WineVueTitle
-                class="section--third-title"
-                text="Март 1980"/>
-
-                <WineVueTitle
-                class="section--third-title"
-                text="Урожай Марселя"/></div>
+                <h1 
+                class="section--third-title">
+                    Март 1980<br/>
+                    Урожай Марселя<br/>
+                </h1>
 
                 <div class="border-line"></div>
 
-                <WineVueText
-                class="section--third-text"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <span
+                class="section--third-text section-text_black"
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Feugiat enim tortor in hac id imperdiet adipiscing.
                 Pellentesque nisi, mi sit non sit sed fermentum.
-                Felis adipiscing morbi sodales ac."/>
+                Felis adipiscing morbi sodales ac.</span>
 
                 <SpreadsheetWine
                 :items="items"/>
 
-                <WineVueText
-                class="section--third-text"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <span
+                class="section--third-text section-text_black"
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Feugiat enim tortor in hac id imperdiet adipiscing.
                 Pellentesque nisi, mi sit non sit sed fermentum.
-                Felis adipiscing morbi sodales ac."/>
+                Felis adipiscing morbi sodales ac.</span>
 
                 <WineVueButton 
                 text="узнать подробнее"/>
@@ -59,8 +56,6 @@
 
 <script setup>
 
-import WineVueText from './GUI/WineVueText.vue';
-import WineVueTitle from './GUI/WineVueTitle.vue';
 import WineVueButton from './GUI/WineVueButton.vue';
 import SpreadsheetWine from './GUI/SpreadsheetWine .vue'
 
@@ -84,6 +79,8 @@ const items = ref([
 .section--third {
     background: rgb(230, 227, 196);
     display: flex;
+    align-items: center;
+    min-height: 1038px;
 }
 
 .content-container {
@@ -93,18 +90,28 @@ const items = ref([
 
 .border-wrapper {
     border-top: 1px solid rgb(153, 132, 49);
-    border-bottom:1px solid rgb(153, 132, 49);
-    margin: 80px auto 80px auto;
-    padding: 64px 0px 60px 0px;
+    border-bottom: 1px solid rgb(153, 132, 49);
     display: flex;
     justify-content: space-between;
     width: 100%;
     overflow-x: hidden;
 }
 
-.sector-content:nth-child(2) {
-    margin-left: 125px;
+.sector-content {
+    padding: 60px 0 60px 0;
 }
+
+.sector-content:nth-child(1) {
+   flex-basis: 40%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.section--third-text:nth-child(1) {
+    font-size: 16px;
+}
+
 .img-wrapper {
     display: flex;
     justify-content: space-between;
@@ -115,30 +122,14 @@ const items = ref([
     margin-right: 30px;
 }
 
-.section--third-text {
-    text-align: left;
-    margin-bottom: 30px;
-    line-height: 21px;
-    font-size: 14px;
-    width: 445px;
-}
-
 .section--third-title {
     color: #282828;
     text-align: left;
-}
-
-.section--third-title:nth-child(1) {
-    margin-bottom: 0px;
-}
-
-.section--third-title:nth-child(2) {
-    margin-top: 0px;
+    margin: 0;
 }
 
 .border-line {
     border-top: 1px solid #282828;
     width: 160px;
-    margin: 28px auto 31px 0px;
 }
 </style>

@@ -1,16 +1,18 @@
 <template>
     <div>
-        <div class="header">
-        <span>Новокузнечный переулок 4/1</span>
-        <span>"8 (812) 123-45-67"</span>
 
-            </div>
-                <MenuItems :items="items"></MenuItems>
-            </div>
+        <div class="header">
+            <span>Новокузнечный переулок 4/1</span>
+            <span>"8 (812) 123-45-67"</span>
+        </div>
+        
+        <NavigationMenu :items="items"></NavigationMenu>
+        
+    </div>
 </template>
 
 <script setup>
-import MenuItems from './GUI/MenuItems.vue';
+import NavigationMenu from './GUI/NavigationMenu.vue';
 
 import { ref } from 'vue'
 

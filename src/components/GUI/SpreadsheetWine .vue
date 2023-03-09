@@ -9,11 +9,11 @@
          v-for="item in items"
          :key="item.id">
 
-            <td class="table-column">{{ item.age }}</td>
+            <td class="table-column section-text_black">{{ item.age }}</td>
 
-            <td class="table-column">
+            <td class="table-column section-text_black">
                 <h2 class="subtitle">{{ item.subtitle }}</h2>
-                <div class="text">{{ item.text }}</div>
+                <div class="section-text_black">{{ item.text }}</div>
             </td>
 
          </tr>
@@ -53,9 +53,6 @@ defineProps({
 .table-column:first-child {
    border-left-width: 0;
    padding: 26px 24px 26px 15px;
-   font-family: 'Montserrat';
-   font-size: 14px;
-   line-height: 21px;
 }
 
 .table-column:last-child {
@@ -68,16 +65,7 @@ defineProps({
 
 .subtitle {
     padding-bottom: 5px;
-    font-family: 'Playfair Display';
-    font-size: 15px;
-    line-height: 37px;
     margin: 0;
     padding: 0;
-}
-
-.text {
-    font-family: 'Montserrat';
-    font-size: 14px;
-    line-height: 21px;
 }
 </style>
