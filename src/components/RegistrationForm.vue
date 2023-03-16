@@ -4,7 +4,7 @@
     class="form">
 
         <div class="input-wrapper">
-            <InputItem 
+            <WineVueInput 
             class="input input_top" 
             type="text"
             placeholder="Имя"
@@ -15,7 +15,7 @@
             class="error-field error-field_name" 
             v-if="!nameValid">{{ errorName }}</span>
 
-            <InputItem 
+            <WineVueInput 
             class="input input_top"
             type="tel"
             placeholder="Телефон"
@@ -27,7 +27,7 @@
             v-if="!phoneValid">{{ errorPhone }}</span>
         </div>
 
-        <InputItem 
+        <WineVueInput 
         class="input input_bottom"
         type="text"
         placeholder="Бутик на Невском 103"
@@ -54,7 +54,7 @@
 </template>
 
 <script setup>
-import InputItem from './GUI/InputItem.vue';
+import WineVueInput from './GUI/WineVueInput.vue';
 import { reactive, ref, computed } from 'vue'
 
 
@@ -138,8 +138,8 @@ function checkForm() {
 .button {
     width: 100%;
     border: 1px solid rgb(255, 255, 255);
-    background: rgb(40, 40, 40);
-    color: rgb(255, 255, 255);
+    background: #282828;
+    color: #ffffff;
     padding: 15px;
     font-size: 16px;
     line-height: 20px;
@@ -165,7 +165,7 @@ function checkForm() {
 .error-field {
     position: absolute;
     display: block;
-    color: rgb(255, 0, 0);
+    color: #ff0000;
     font-size: 13px;
 }
 
@@ -182,15 +182,15 @@ function checkForm() {
 }
 
 .input:valid {
-    border-bottom: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid #ffffff;
 }
 
 .input:invalid {
-    border-bottom: 1px solid rgb(255, 0, 0);
+    border-bottom: 1px solid #ff0000;
 }
 
 .input:focus {
-    border-bottom: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid #ffffff;
 }
 
 .modal-window {

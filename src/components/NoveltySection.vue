@@ -40,11 +40,11 @@
 
             <div class="sector-content">
 
-                <img src="..//../Image/SectionThirdImgTop.jpg">
+                <img src="../../image/SectionThirdImgTop.jpg">
 
             <div class="img-wrapper">
-                <img class="img-bottom" src="..//../Image/SectionThirdImgUnderLeft.jpg">
-                <img src="..//../Image/SectionThirdImgUnderRight.jpg">
+                <img class="img-bottom" src="../../image/SectionThirdImgUnderLeft.jpg">
+                <img src="../../image/SectionThirdImgUnderRight.jpg">
             </div>
 
             </div>
@@ -57,7 +57,7 @@
 <script setup>
 
 import WineVueButton from './GUI/WineVueButton.vue';
-import SpreadsheetWine from './GUI/SpreadsheetWine .vue'
+import SpreadsheetWine from './SpreadsheetWine .vue';
 
 import { ref } from 'vue'
 
@@ -77,7 +77,7 @@ const items = ref([
 <style scoped>
 
 .section--third {
-    background: rgb(230, 227, 196);
+    background: #e6e3c4;
     display: flex;
     align-items: center;
     min-height: 1038px;
@@ -89,8 +89,8 @@ const items = ref([
 }
 
 .border-wrapper {
-    border-top: 1px solid rgb(153, 132, 49);
-    border-bottom: 1px solid rgb(153, 132, 49);
+    border-top: 1px solid #998431;
+    border-bottom: 1px solid #998431;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -110,6 +110,7 @@ const items = ref([
 
 .section--third-text:nth-child(1) {
     font-size: 16px;
+    text-align: left;
 }
 
 .img-wrapper {

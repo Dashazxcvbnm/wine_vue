@@ -1,8 +1,7 @@
 h1 {
     font-family: 'Playfair Display';
     font-size: 32px;
-    color: rgb(255, 255, 255);
-    text-align: center;
+    color: #ffffff;
     line-height: 54px;
 }
 
@@ -14,16 +13,14 @@ h2 {
 
 .section-text_white {
     font-family: 'Montserrat';
-    color: rgb(255, 255, 255);
-    text-align: center;
+    color: #ffffff;
     font-size: 16px;
     line-height: 24px;
 }
 
 .section-text_black {
     font-family: 'Montserrat';
-    color: rgb(40, 40, 40);
-    text-align: left;
+    color: #282828;
     font-size: 14px;
     line-height: 21px;
 }
