@@ -28,9 +28,9 @@
 
                     <td
                     class="spreadsheet-column spreadsheet-column_under icon-wrap">
-                        <a class="menu-link"><img src="..//../icons/VectorLeft.svg"></a>
-                        <a class="menu-link"><img src="..//../icons/VectorCenter.svg"></a>
-                        <a class="menu-link"><img src="..//../icons/VectorRight.svg"></a>
+                        <a class="menu-link"><img src="../../icons/VectorLeft.svg"></a>
+                        <a class="menu-link"><img src="../../icons/VectorCenter.svg"></a>
+                        <a class="menu-link"><img src="../../icons/VectorRight.svg"></a>
                     </td>
 
                     <td
@@ -63,10 +63,10 @@ const itemsMenu = ref([
 <style scoped>
 
 .footer {
-    background: rgb(153, 132, 49);
+    background: #998431;
     display: flex;
     min-height: 220px;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     flex-direction: column;
     justify-content: center;
 }
@@ -88,7 +88,7 @@ const itemsMenu = ref([
 .spreadsheet-column {
     text-align: center;
     width: 1110px;
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid #ffffff;
     border-left-width: 0;
     border-right-width: 0;
     white-space: nowrap;
@@ -108,7 +108,7 @@ const itemsMenu = ref([
 
 .spreadsheet-column_under {
     border-top: 0;
-    border-right: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid #ffffff;
     text-transform: uppercase;
     white-space: nowrap;
 }
@@ -120,8 +120,6 @@ const itemsMenu = ref([
 .spreadsheet-column_under:nth-child(2) {
     width: 25%;
 }
-
-.icon-wrap {}
 
 .icon-wrap  > .menu-link:nth-child(1) {
     margin-right: 36px;

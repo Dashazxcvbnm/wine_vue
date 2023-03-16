@@ -26,7 +26,7 @@
                  
             <div class="section-img">
                     
-            <img src="..//../Image/SectionSecondImage.png">
+            <img src="../../image/SectionSecondImage.png">
 
             </div>
         </div>
@@ -37,7 +37,7 @@
 <style scoped>
 
 .section--second {
-    background: rgb(40, 40, 40);
+    background: #282828;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -50,7 +50,7 @@
 }
 
 .border-wrapper {
-    border: 3px solid rgb(196, 196, 196);
+    border: 3px solid #c4c4c4;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,15 +61,17 @@
 .section--second-title {
     padding-top: 60px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .border-line {
     width: 160px;
-    border-top: 1px solid rgb(255, 255, 255);
+    border-top: 1px solid #ffffff;
 }
 
 .section--second-text {
     width: 66%;
+    text-align: center;
 }
 
 .section-img {

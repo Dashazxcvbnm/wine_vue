@@ -10,11 +10,11 @@
 
             <img 
             class="section-fourth__img" 
-            src="..//../Image/SectionFourthImgLeft.png">
+            src="../../image/SectionFourthImgLeft.png">
 
             <img 
             class="section-fourth__img" 
-            src="..//../Image/SectionFourthImgRight.png">
+            src="../../image/SectionFourthImgRight.png">
 
         </div>
     
@@ -47,7 +47,7 @@ import RegistrationForm from './RegistrationForm.vue';
 <style scoped>
 
 .section--fourth {
-    background: rgb(40, 40, 40);
+    background: #282828;
     min-height: 767px;
     align-items: center;
     display: flex;
@@ -60,7 +60,7 @@ import RegistrationForm from './RegistrationForm.vue';
 }
 
 .border-wrapper {
-    border: 3px solid rgb(196, 196, 196);
+    border: 3px solid #c4c4c4;
     display: flex;
     justify-content: space-around;
     width: 1110px;
@@ -86,7 +86,8 @@ import RegistrationForm from './RegistrationForm.vue';
     top: -48px;
     left: 300px;
     width: 490px;
-    background-color: rgb(40, 40, 40);
+    background-color: #282828;
+    text-align: center;
 }
 
 .section-fourth__img {
@@ -115,5 +116,6 @@ import RegistrationForm from './RegistrationForm.vue';
 
 .section-text_white {
     padding-bottom: 30px;
+    text-align: center;
 }
 </style>

@@ -20,10 +20,10 @@ const emits = defineEmits(['update:modelValue']);
 .input-form {
     font-size: 13px;
     font-family: 'Montserrat';
-    background-color: rgb(40, 40, 40);
-    color: rgb(255, 255, 255);
+    background-color: #282828;
+    color: #ffffff;
     border: none;
-    border-bottom: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid #ffffff;
     outline: none;
     padding-bottom: 10px;
 }
