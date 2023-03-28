@@ -56,11 +56,10 @@
     flex-direction: column;
     align-items: center;
     min-height: 656px;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .section--second-title {
-    padding-top: 60px;
     margin: 0 auto;
     text-align: center;
 }
@@ -75,7 +74,4 @@
     text-align: center;
 }
 
-.section-img {
-    padding-bottom: 60px;
-}
 </style>
