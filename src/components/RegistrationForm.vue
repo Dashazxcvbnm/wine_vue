@@ -5,22 +5,24 @@
 
         <div class="input-wrapper">
             <WineVueInput 
-            class="input input_top" 
+            class="input_top" 
             type="text"
             placeholder="Имя"
-            v-model="input.name"
-            required/>
+            v-model="name"
+            @input="validateName"
+            :class="{'error-input': !nameValid}"/>
 
             <span
             class="error-field error-field_name" 
             v-if="!nameValid">{{ errorName }}</span>
 
             <WineVueInput 
-            class="input input_top"
+            class="input_top"
             type="tel"
             placeholder="Телефон"
-            v-model="input.phone"
-            required/>
+            v-model="phone"
+            @input="validatePhone"
+            :class="{'error-input': !phoneValid}"/>
 
             <span
             class="error-field error-field_phone" 
@@ -28,11 +30,12 @@
         </div>
 
         <WineVueInput 
-        class="input input_bottom"
+        class="input_bottom"
         type="text"
         placeholder="Бутик на Невском 103"
-        v-model="input.add"
-        required/>
+        v-model="add"
+        @input="validateAdd"
+        :class="{'error-input': !addValid}"/>
 
         <span
         class="error-field error-field_add" 
@@ -40,7 +43,8 @@
 
         <button 
         class="button"
-        @click.prevent="checkForm">
+        type="sumbmit"
+        @click.prevent="!checkForm">
         записаться
         </button>
 
@@ -55,73 +59,85 @@
 
 <script setup>
 import WineVueInput from './GUI/WineVueInput.vue';
-import { reactive, ref, computed } from 'vue'
-
-
-const input = reactive({
-  name: '',
-  phone: '',
-  add: ''
-})
+import { ref, computed } from 'vue'
 
 const errorName = ref('')
 const errorPhone = ref('')
 const errorAdd = ref('')
 
-const nameValid = computed(() => {
-    const value = input.name
-    if (!value.length) {
+const Validator = {
+
+  validateName(name) {
+    const minLength = 2;
+    const regex = /[А-Я][а-я]+/g;
+   
+    if (!name.length) {
         errorName.value = 'Заполните поле'
         return false
     }
-    
-    if (!(/[А-Я][а-я]+/g.test(value)) || (value.length <= 2)) {
+    if (!regex.test(name) || name.length <= minLength) {
         errorName.value = 'Имя некорректно';
         return false
     }
-    errorName.value = ''
-        return !!value
-})
+        return !!name
+  },
 
-const phoneValid = computed(() => {
-    const value = input.phone
-    const globalRegex = new RegExp('^[8][0-9]{10}$');
-    if (!value.length) {
+  validatePhone(phone) {
+    const regex = /^[8][0-9]{10}$/;
+
+    if (!phone.length) {
         errorPhone.value = 'Заполните поле'
         return false
     }
-    
-    if (!globalRegex.test(value)) {
+    if (!regex.test(phone)) {
         errorPhone.value = 'Телефон некорректный';
         return false
     }
-        return !!value
-})
+        return !!phone
+},
 
-const addValid = computed(() => {
-    const value = input.add
-    if (!value.length) {
+  validateAdd(add) {
+    if (!add.length) {
         errorAdd.value = 'Заполните поле'
         return false
     }
-        return !!value
-})
+        return !!add
+  }
 
+};
 
-function checkForm() {
-    const formValid = nameValid.value && phoneValid.value && addValid.value
+const name = ref('')
+const phone = ref('')
+const add = ref('')
+
+const nameValid = ref(false)
+const phoneValid = ref(false)
+const addValid = ref(false)
+
+function validateName() {
+    nameValid.value = Validator.validateName(name.value);
+ }
+
+function validatePhone() {
+    phoneValid.value = Validator.validatePhone(phone.value);
+ }
+
+ function validateAdd() {
+    addValid.value = Validator.validateAdd(add.value);
+ }
+
+ const checkForm = computed(() => {
+ const formValid = nameValid.value && phoneValid.value && addValid.value;
       if (formValid) {
         document.querySelector('.form').reset();
         const successModal = document.querySelector('.modal-window');
         successModal.style.display = 'block';
 
-            setTimeout(()=> {
+          setTimeout(()=> {
                 successModal.style.display = 'none'
             }, 5000)
-            
       }
-      return
-    }
+      })
   
 </script>
 
@@ -181,15 +197,11 @@ function checkForm() {
     transform: translate(0px, 108px);
 }
 
-.input:valid {
-    border-bottom: 1px solid #ffffff;
-}
-
-.input:invalid {
+.error-input {
     border-bottom: 1px solid #ff0000;
 }
 
-.input:focus {
+.error-input:focus {
     border-bottom: 1px solid #ffffff;
 }
 
@@ -197,7 +209,7 @@ function checkForm() {
     position:  absolute;
     width: 250px;
     height: 50px;
-    background-color: rgb(105, 105, 105);
+    background-color: #696969;
     display: none;
     transform: translate(150px, -250px);
     text-align: center;
