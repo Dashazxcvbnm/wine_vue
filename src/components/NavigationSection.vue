@@ -29,9 +29,9 @@ import PageHeader from '../components/PageHeader.vue';
 }
 
 .section--first {
-    background-image: url(../Image/SectionFirstFon.jpg);
+    background-image: url(../image/SectionFirstFon.jpg);
     background-repeat: no-repeat;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     min-height: 900px;
 }
 

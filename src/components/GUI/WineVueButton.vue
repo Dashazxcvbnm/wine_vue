@@ -15,8 +15,8 @@ defineProps({
 <style scoped>
 
 .btn {
-    background: rgb(153, 132, 49);
-    color: rgb(255, 255, 255);
+    background: #998431;
+    color: #ffffff;
     padding: 15px 30px;
     border: none;
     font-size: 16px;
@@ -24,5 +24,6 @@ defineProps({
     font-family: 'Montserrat';
     text-transform: uppercase;
     cursor: pointer;
+    white-space: nowrap;
 }
 </style>
