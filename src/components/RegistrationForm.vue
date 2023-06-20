@@ -153,7 +153,7 @@ function validatePhone() {
 
 .button {
     width: 100%;
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid #ffffff;
     background: #282828;
     color: #ffffff;
     padding: 15px;
